@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+a, ul {
+  text-decoration: none;
+  text-decoration: none;
+  list-style: none;
+  font-style: normal;
+}/*# sourceMappingURL=main.css.map */

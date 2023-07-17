@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="shortcut icon"
+      href="assets/img/Фавикон-IGaming.ico"
+      type="image/x-icon"
+    />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <!-- <link rel="stylesheet" href="css/fonts.css" /> -->
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    <link href="/css/main.min.css" rel="stylesheet" />
+
+    <title>iGaming management</title>
+  </head>
+  <body>
+    <section class="section">
+      <div class="nav-bar-mobile hidden">
+        <div>
+          <div class="nav-bar-mobile-header">
+            <div class="lang_block">
+              <ul class="dropdown-lang">
+                <li class="dropdown-li">
+                  <div class="active_langs dropdown-li">
+                    <span class="lang-title">RU</span>
+                    <img
+                      class="arrow-down"
+                      src="./assets/img/arrow_down.svg"
+                      alt="arrow-down"
+                    />
+                  </div>
+                  <div
+                    class="disabled_langs main-dropdown-menu"
+                    style="display: none"
+                  >
+                    <a
+                      href="#"
+                      onClick="changeLanguage(event,'{{second_lang}}')"
+                    >
+                      <span class="lang-title">EN</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <span class="btn-close" onClick="closePopup()">
+              <img src="./assets/img/close2.svg" alt="" />
+            </span>
+          </div>
+
+          <div class="nav-bar-mobile-menu">
+            <div class="nav-bar-mobile-menu-items">
+              <a href="#block-slider">Чем мы можем помочь </a>
+              <img src="./assets/img/arrow_up_right2.svg" alt="" />
+            </div>
+            <div class="nav-bar-mobile-menu-items">
+              <a href="#block-project">Нанять команду</a>
+              <img src="./assets/img/arrow_up_right2.svg" alt="" />
+            </div>
+            <div class="nav-bar-mobile-menu-items">
+              <a href="#block-project">Выбрать проект </a>
+              <img src="./assets/img/arrow_up_right2.svg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="buttons">
+          <a class="contact_us">Вход</a>
+          <a class="contact_us">Регистрация</a>
+        </div>
+      </div>
+
+      <div class="block_video">
+        <video
+          src="./assets/video/Video1.mp4"
+          autoplay
+          muted
+          playsinline
+          loop
+        ></video>
+      </div>
+      <div class="content-block">
+        <header class="header">
+          <div class="nav-bar">
+            <img
+              class="logo"
+              src="./assets/img/Logo IGaming Management.svg"
+              alt="Logo"
+            />
+
+            <div onClick="toggleMobileMenu()">
+              <img
+                class="menu-icon"
+                src="./assets/img/menu.svg"
+                alt="Icon-menu"
+              />
+            </div>
+            <a href="#block-slider">Чем мы можем помочь </a>
+            <a href="#block-project">Нанять команду</a>
+            <a href="#block-project">Выбрать проект </a>
+
+            <div class="lang_block">
+              <ul class="dropdown-lang">
+                <li class="dropdown-li">
+                  <div class="active_langs dropdown-li">
+                    <span class="lang-title">RU</span>
+                    <img
+                      class="arrow-down"
+                      src="./assets/img/arrow_down.svg"
+                      alt="arrow-down"
+                    />
+                  </div>
+                  <div
+                    class="disabled_langs main-dropdown-menu"
+                    style="display: none"
+                  >
+                    <a
+                      href="#"
+                      onClick="changeLanguage(event,'{{second_lang}}')"
+                    >
+                      <span class="lang-title">EN</span>
+                    </a>
+                  </div>
+                </li>
+              </ul>
+              <div class="buttons">
+                <a class="contact_us">Вход</a>
+                <a class="contact_us">Регистрация</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="header-about">
+            <h1 class="title">
+              Консалтинг и аутсорсинг <br />
+              для владельцев игорного бизнеса
+            </h1>
+            <div class="header-about-text">
+              <div class="text-container">
+                <p class="">
+                  <img src="./assets/img/icon_Group2.svg" alt="Icon group" />
+                  Соединяем компании с талантами, помогаем им развиваться,
+                  решаем бизнес‑задачи лидеров рынка
+                </p>
+              </div>
+
+              <div class="text-container">
+                <p class="">
+                  <img
+                    src="./assets/img/icon_Profile_Add.svg"
+                    alt="Иконка проверки"
+                  />
+                  Предоставляем удалённых специалистов по разработке, дизайну,
+                  управлению, маркетингу и продажам
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-container">
+            <form class="header-form">
+              <!-- <div> -->
+              <!-- <input type="hidden" name="_csrf" value="{{csrfToken}}" /> -->
+              <label>
+                <input
+                  type="text"
+                  name="name"
+                  autocomplete="off"
+                  placeholder="Имя"
+                  minlength="2"
+                  required
+                />
+              </label>
+              <label for="lastName">
+                <input
+                  type="text"
+                  name="phone"
+                  autocomplete="off"
+                  placeholder="7 (999) 99-99-99"
+                  pattern="[0-9]*"
+                  required
+                />
+              </label>
+              <label>
+                <input
+                  type="email"
+                  name="email"
+                  autocomplete="off"
+                  placeholder="smith@gmail.com"
+                  pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}"
+                  required
+                />
+              </label>
+              <button class="form-btn" type="submit">Отправить заявку</button>
+              <!-- </div> -->
+            </form>
+            <div class="form-container-footer">
+              <div class="form-container-footer-text">
+                <p>
+                  <img src="./assets/img/icon_Group3.svg" alt="Icon group" />
+                  Подбираем команду за 5 дней
+                </p>
+                <p>
+                  <img
+                    src="./assets/img/icon_Profile_Accepted.svg"
+                    alt="Icon profile"
+                  />
+                  Предоставляем проект менеджера
+                </p>
+              </div>
+
+              <div class="private-info-text">
+                <label class="custom-checkbox">
+                  <input type="checkbox" required class="checkbox" />
+                  <span class="checkmark"></span>
+                </label>
+                <span>
+                  Я ознакомлен и согласен с условиями
+                  <a href="https://imans.io/Policy.pdf" target="_blank">
+                    политики конфиденциальности</a
+                  >
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="marquee">
+            <div class="marquee-content">
+              <img src="./assets/img/partners/logo_imans.png" alt="Логотип 1" />
+              <img
+                src="./assets/img/partners/logo_hello_africa.png"
+                alt="Логотип 2"
+              />
+              <img src="./assets/img/partners/logo_puma.png" alt="Логотип 8" />
+              <img
+                src="./assets/img/partners/logo_hello_georgia.png"
+                alt="Логотип 3"
+              />
+              <img
+                src="./assets/img/partners/logo_b2b_gambling.png"
+                alt="Логотип 4"
+              />
+              <img
+                src="./assets/img/partners/logo_bacon_games.png"
+                alt="Логотип 5"
+              />
+              <img
+                src="./assets/img/partners/logo_eclipse.png"
+                alt="Логотип 6"
+              />
+              <img src="./assets/img/partners/logo_moyo.png" alt="Логотип 7" />
+            </div>
+          </div>
+        </header>
+
+        <main class="main">
+          <div class="slider-container" id="block-slider">
+            <div class="slider-left">
+              <h2 class="slider-title">Чем мы можем помочь</h2>
+
+              <div class="arrows-slider">
+                <!-- <div>01/07</div> -->
+                <button class="prev-button">
+                  <img src="./assets/img/arrow_slider.svg" alt="" />
+                </button>
+                <button class="next-button">
+                  <img src="./assets/img/arrow_slider_right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+            <div class="slider">
+              <div class="slide">
+                <h2 class="slide-title">
+                  Исследование рынка. Генерация бизнеса на новые рынки
+                </h2>
+                <p class="slide-text">
+                  Подбираем эффективные инструменты для получения информации
+                  о рынке, потребителях, клиентах, конкурентах. Формулируем
+                  гипотезы, находим инсайты, составляем прогнозы
+                </p>
+                <ul class="slide-list">
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Анализ рынка и выявление его емкости
+                    </li>
+                  </div>
+
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Анализ конкурентов</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Поиск целевой аудитории</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Разработка уникального торгового предложения 
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Маркетинговое исследование 
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Юридическое сопровождение проекта
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="slide slide2 hidden">
+                <h2 class="slide-title">Рекрутинг. Поиск и набор персонала</h2>
+                <p class="slide-text">
+                  Заменяем нижний уровень HR-ов в компании, полностью
+                  обеспечивая компанию потоком соискателей по конкретной
+                  вакансии. Ищем кандидатов, ведём с ними коммуникацию, проводим
+                  интервью. Нанимаем работников в любой точке мира
+                </p>
+                <ul class="slide-list">
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Поиск подходящих по профилю кандидатов и коммуникация с
+                      ними
+                    </li>
+                  </div>
+
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Привлечение на вакансии из различных каналов
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Проведение интервью с кандидатами
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Обучение персонала </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Перепрофилирование персонала 
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Предоставление готовых команд специалистов
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="slide slide3 hidden">
+                <h2 class="slide-title">Дизайн. Упаковка проекта</h2>
+                <p class="slide-text">
+                  Разрабатываем фирменный стиль проекта. Создаем рекламные
+                  креативы, лендинги, дизайн для email-рассылок и презентаций.
+                  Монтируем ролики и анимируем готовые изображения. Работаем с
+                  3D моделями. Создаем уникальных персонажей для проекта
+                </p>
+                <ul class="slide-list">
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Web дизайн</li>
+                  </div>
+
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Имиджевый дизайн</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Маркетинговый дизайн</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Корпоративный дизайн</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Геймдизайн</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Инфографика, видео презентации
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="slide slide4 hidden">
+                <h2 class="slide-title">Партнерский маркетинг</h2>
+                <p class="slide-text">
+                  Анализируем рынок и подбираем оптимальные условия работы.
+                  Разрабатываем стратегию, предоставляем проверенные и
+                  эффективные арбитражные команды. Контролируем, анализируем,
+                  оптимизируем бюджет проекта
+                </p>
+                <ul class="slide-list">
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Content Partnership</li>
+                  </div>
+
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Кросс-маркетинг</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Работа с CPA-сетями</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Affiliate Marketing</li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">Аутрич партнёров</li>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="slide slide5 hidden">
+                <h2 class="slide-title">Инфлюенс маркетинг</h2>
+                <p class="slide-text">
+                  IGaming Management помогает компаниям найти лидеров мнений под
+                  их проект. В нашей базе находится больше 100 000 блогеров.
+                  Сопровождаем от подбора блогеров до получения результата,
+                  ведём коммуникацию с блогерами, договариваемся о размещениях,
+                  следим за эффективность рекламной кампании
+                </p>
+                <p class="slide-text">
+                  Мы всегда готовы подобрать релевантного блогера для вашей
+                  целевой аудитории и разработать креативную интеграцию.
+                  Работаем по системе Revshare и CPA. Нашу работу строим на
+                  принципах системности, прозрачности и качества, гарантируем
+                  результат
+                </p>
+              </div>
+
+              <div class="slide slide6 hidden">
+                <h2 class="slide-title">Контекстная реклама</h2>
+                <p class="slide-text">
+                  Настраиваем контекстную рекламу, создаем и тестируем креативы,
+                  анализируем кампании и улучшаем их. Партнер получает
+                  комплексную маркетинговую поддержку: работаем с воронкой
+                  продаж, позиционированием и торговыми предложениями
+                </p>
+                <ul class="slide-list">
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Тщательно прорабатываем поисковые запросы
+                    </li>
+                  </div>
+
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Регулярно проводим анализ, отключаем неэффективные
+                      объявления
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Детально прорабатываем весь путь игрока на сайте
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Используем различные виды объявлений и рекламных кампаний
+                      в Яндекс и Google: текстовые, текстово-графические
+                      баннеры, видео
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Индивидуально подходим к каждому проекту
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Готовим и тестируем гипотезы, зарекомендовавшие себя
+                      на рынке продвижения
+                    </li>
+                  </div>
+                </ul>
+              </div>
+
+              <div class="slide slide7 hidden">
+                <h2 class="slide-title">SERM</h2>
+                <p class="slide-text">
+                  Формируем положительное информационное поле онлайн казино в
+                  интернете. Наращиваем объёмы положительного контента и
+                  вытесняем негатив с первых позиций поисковой выдачи
+                </p>
+                <ul class="slide-list">
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Анализируем информационное поле компании на текущий момент
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Сравниваем позиции конкурентов с вашим проектом
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Прорабатываем стратегию по улучшению поисковой выдачи и
+                      репутации казино на площадках
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Изучаем сильные и слабые стороны продукта компании
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Проводим комплексную работу с отзывами
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Помогаем в удалении нерелевантных негативных отзывов
+                    </li>
+                  </div>
+                  <div class="slide-list-box">
+                    <img src="./assets/img/Vector_tick1.svg" alt="" />
+                    <li class="slide-list-box-li">
+                      Мониторим динамику изменения информационного поля компании
+                    </li>
+                  </div>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-about">
+            <div class="about-container">
+              <h2 class="block-about-title">О нас</h2>
+              <div class="block-about-right">
+                <div class="block-about-right-text-block">
+                  <p>
+                    IGaming Management — <br />
+                    это B2B-маркетплейс с большим каталогом ИТ‑специалистов
+                    от лучших ИТ‑компаний в сфере игорного бизнеса
+                    и возможностью их аренды по формату аутстафф
+                  </p>
+                  <p>
+                    IGaming Management позволяет вовлекать удаленные команды для
+                    усиления проектных команд или собрать свою личную команду с
+                    нуля
+                  </p>
+                </div>
+                <div class="mission">
+                  <h2 class="mission-title">
+                    Наша миссия
+                    <img src="./assets/img/icon_tick.svg" alt="" />
+                  </h2>
+
+                  <p class="mission-title-text">
+                    Снять барьеры между компаниями и командами для быстрого,
+                    эффективного и профессионального создания гемблинг проектов
+                    по всему миру
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-process">
+            <div class="item-white">
+              <h2 class="block-process-title">Как мы работаем</h2>
+            </div>
+            <div class="item item-colored">
+              <p class="number">
+                01
+                <img src="./assets/img/icon_Award.svg" alt="" />
+              </p>
+              <p class="item-colored-about box1">
+                Обговариваем ваши цели и задачи
+              </p>
+            </div>
+            <div class="item item-colored item02">
+              <p class="number">
+                02
+                <img src="./assets/img/icon_Profile_Accepted.svg" alt="" />
+              </p>
+              <p class="item-colored-about box2">
+                Выделяем личного проджект-менеджера 
+              </p>
+            </div>
+            <div class="item item-colored item03">
+              <p class="number">
+                03
+                <img src="./assets/img/icon_Group3.svg" alt="" />
+              </p>
+              <p class="item-colored-about box3">Набираем команду</p>
+            </div>
+            <div class="item item-colored item04">
+              <p class="number">
+                04
+                <img src="./assets/img/icon_Calender.svg" alt="" />
+              </p>
+              <p class="item-colored-about box4">
+                Настраиваем проектное планирование
+              </p>
+            </div>
+            <div class="item item-colored item03">
+              <p class="number">
+                05
+                <img src="./assets/img/icon_Shield_Plus.svg" alt="" />
+              </p>
+              <p class="item-colored-about box5">Контролируем разработку </p>
+            </div>
+            <div class="item item-colored item04">
+              <p class="number">
+                06
+                <img src="./assets/img/icon_Setting.svg" alt="" />
+              </p>
+              <p class="item-colored-about box6">
+                Оказываем пострелизное сопровождение проекта
+              </p>
+            </div>
+            <div class="item item-colored item01">
+              <p class="number">
+                07
+                <img src="./assets/img/icon_Message.svg" alt="" />
+              </p>
+              <p class="item-colored-about box7">
+                Предоставляем полную маркетинговую поддержку
+              </p>
+            </div>
+            <div>
+              <h3 class="work-title">
+                Оставьте заявку или забронируйте бесплатную консультацию
+              </h3>
+              <p class="work-title-text">
+                Ответим на вопросы и обсудим Ваши задачи
+              </p>
+              <button type="button" class="blue-btn" onClick="popupShow()">
+                Отправить заявку
+              </button>
+            </div>
+          </div>
+
+          <div class="block-project" id="block-project">
+            <div class="block-project-background">
+              <div class="block-project-container">
+                <div class="block-project-items">
+                  <h2 class="block-project-title">
+                    Найди проект и собери команду с нами
+                  </h2>
+                  <div>
+                    <div class="block-project-card">
+                      <div class="block-project-card-header">
+                        <button class="block-project-card-btn">Проекты</button>
+                        <img src="./assets/img/icon_Document_Add.svg" alt="" />
+                      </div>
+                      <p class="block-project-card-text">
+                        IGaming Management поможет вам найти интересный
+                        и надёжный проект, в котором вы сможете стать частью
+                        команды профессионалов
+                      </p>
+                      <p class="block-project-card-text">
+                        Только вы определяете перспективность либо интересность
+                        проекта и принимаете решение, стоит ли участвовать
+                        в команде и реализовывать идею. Оговаривайте условия
+                        вашего партнёрства с координатором проекта.
+                      </p>
+                      <button
+                        class="block-project-card-find-btn"
+                        onClick="popupShow()"
+                      >
+                        Найти проект
+                        <img src="./assets/img/arrow_up_right.svg" alt="" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="block-project-card">
+                <div class="block-project-card-header">
+                  <button class="block-project-card-btn">команды</button>
+                  <img src="./assets/img/icon_Profile_Add.svg" alt="" />
+                </div>
+                <p class="block-project-card-text">
+                  IGaming Management позволит найти людей в команду, которые
+                  знают и умеют реализовывать самые различные гемблинг продукты
+                </p>
+                <p class="block-project-card-text">
+                  Вы можете пригласить их в свой стартап либо в действующий
+                  бизнес и вместе реализовать интересные идеи. Все очень просто.
+                  Вы разрабатываете идею, описываете каких профессионалов
+                  не хватает в проекте для качественной реализации и получаете
+                  готовую команду.
+                </p>
+                <button
+                  class="block-project-card-find-btn"
+                  onClick="popupShow()"
+                >
+                  Найти команду
+                  <img src="./assets/img/arrow_up_right.svg" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-specialists">
+            <h2 class="block-specialists-title">
+              Сообщество близких по духу специалистов
+            </h2>
+            <div class="block-specialists-card">
+              <div class="block-specialists-card-grid">
+                <div class="item">
+                  <p class="p1">Находи партнеров и друзей</p>
+                  <img src="./assets/img/icon_Group2.svg" alt="" />
+                </div>
+                <div class="item">
+                  <p class="p1">Развивайся и зарабатывай</p>
+                  <img src="./assets/img/icon_Wallet.svg" alt="" />
+                </div>
+                <div class="item">
+                  <p>Делай эффективнее и прибыльнее свой бизнес</p>
+                  <img src="./assets/img/icon_Dollar.svg" alt="" />
+                </div>
+                <div class="item">
+                  <p class="p2">Помогай другим и находи помощь сам</p>
+                  <img src="./assets/img/icon_Message2.svg" alt="" />
+                </div>
+                <div class="item">
+                  <p class="p3">Отдыхай и общайся в кругу единомышленников</p>
+                  <img src="./assets/img/icon_Like.svg" alt="" />
+                </div>
+              </div>
+              <div>
+                <h3>
+                  Мы не только соединяем команды и бизнес. Мы строим вместе наше
+                  общее, сильное и дружное комьюнити
+                </h3>
+                <div class="community-block">
+                  <div>
+                    <h4>B2B Gambling Club</h4>
+                    <p class="community-block-text">
+                      Закрытый клуб предпринимателей в сфере игорного бизнеса
+                    </p>
+                  </div>
+                  <button
+                    type="button"
+                    class="community-block-btn"
+                    onClick="popupShow()"
+                  >
+                    Подробнее
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-education">
+            <h2 class="block-education-title">Международный учебный центр</h2>
+            <div>
+              <div class="block-education-upper">
+                <p class="block-education-upper-text">
+                  Добро пожаловать в Progressive Umoja Marketing Africa (PUMA).
+                  В рамках компании IGaming Management мы открыли первый
+                  международный офлайн учебный центр в сфере интернет маркетинга
+                  с гарантированным трудоустройством в IGaming проекты
+                </p>
+                <p class="block-education-upper-text">
+                  Мы верим в успех каждого. Мы верим, что в каждом есть сила
+                  и талант, чтобы добиваться больших целей. Мы помогаем найти
+                  путь развития и реализовать себя через профессию — так,
+                  как вам этого хочется
+                </p>
+              </div>
+              <div class="block-education-lower">
+                <button class="block-education-btn" onClick="popupShow()">
+                  подробнее
+                </button>
+                <div class="block-education-lower-card">
+                  <ul>
+                    <div class="block-education-list">
+                      <img src="./assets/img/Vector_arrow1.svg" alt="" />
+                      <li>Станьте востребованным специалистом</li>
+                    </div>
+                    <div class="block-education-list">
+                      <img src="./assets/img/Vector_arrow1.svg" alt="" />
+                      <li>Получите актуальную специальность</li>
+                    </div>
+                    <div class="block-education-list">
+                      <img src="./assets/img/Vector_arrow1.svg" alt="" />
+                      <li>Получите новые навыки для карьеры</li>
+                    </div>
+                    <div class="block-education-list">
+                      <img src="./assets/img/Vector_arrow1.svg" alt="" />
+                      <li>Занимайтесь тем, чем нравится</li>
+                    </div>
+                    <div class="block-education-list">
+                      <img src="./assets/img/Vector_arrow1.svg" alt="" />
+                      <li>Меняйте профессию, меняйте жизнь</li>
+                    </div>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="block-contacts">
+            <h3 class="block-contacts-title">Контакты</h3>
+            <div>
+              <div class="contacts-info">
+                <p class="contacts-info-text">
+                  Наши специалисты будут рады ответить на все ваши вопросы,
+                  а также предоставят всю необходимую вам информацию
+                </p>
+                <div class="block-social">
+                  <div class="region-social-links">
+                    <p class="region-name">Грузия:</p>
+                    <div class="social-links">
+                      <a href="whatsapp://send?phone=+995558791268">
+                        <img
+                          class="social-links-icon"
+                          src="./assets/img/WA.svg"
+                          alt="whatsapp-icon"
+                        />
+                      </a>
+                      <a href="tg://resolve?domain=infoimans">
+                        <img
+                          class="social-links-icon"
+                          src="./assets/img/TG.svg"
+                          alt="telegram-icon"
+                        />
+                      </a>
+                      <a class="email-link" href="mailto:info@imans.io">
+                        <img
+                          class="social-links-icon icon-email"
+                          src="./assets/img/Mail.svg"
+                          alt="Email"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                  <div class="region-social-links">
+                    <p class="region-name">Кения:</p>
+                    <div class="social-links">
+                      <a href="whatsapp://send?phone=+995558791268">
+                        <img
+                          class="social-links-icon"
+                          src="./assets/img/WA.svg"
+                          alt="whatsapp-icon"
+                        />
+                      </a>
+                      <a href="tg://resolve?domain=infoimans">
+                        <img
+                          class="social-links-icon"
+                          src="./assets/img/TG.svg"
+                          alt="telegram-icon"
+                        />
+                      </a>
+                      <a class="email-link" href="mailto:info@imans.io">
+                        <img
+                          class="social-links-icon icon-email"
+                          src="./assets/img/Mail.svg"
+                          alt="Email"
+                        />
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="partners">
+                <h3 class="partners-title">Проект развивается при поддержке</h3>
+                <div class="partners-links">
+                  <div class="partners-links-eclipse">
+                    <div class="partners-links-items">
+                      <h3>ECLIPSE CASINO</h3>
+                      <a
+                        class="brand-info-title"
+                        href="https://www.eclipse.casino"
+                        target="_blank"
+                        >www.eclipse.casino
+                      </a>
+                    </div>
+
+                    <div class="partners-links-items">
+                      <a href="https://www.eclipse.casino" target="_blank">
+                        <img
+                          src="./assets/img/eclipse_logo_casino 1.svg"
+                          alt="Eclipse-logo"
+                          class="eclipse-logo"
+                        />
+                      </a>
+                      <button type="button" class="partners-links-items-btn">
+                        Презентация
+                      </button>
+                    </div>
+                  </div>
+
+                  <div class="partners-links-items">
+                    <h3>MOYO CASINO</h3>
+                    <a
+                      class="brand-info-title"
+                      href="https://www.moyo.casino"
+                      target="_blank"
+                      >www.moyo.casino
+                    </a>
+                  </div>
+
+                  <div class="partners-links-items">
+                    <a href="https://www.moyo.casino" target="_blank">
+                      <img
+                        src="./assets/img/moyo_logoblock_casino 1.svg"
+                        alt="Moyo-logo"
+                        class="moyo-logo"
+                      />
+                    </a>
+                    <button type="button" class="partners-links-items-btn">
+                      Презентация
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <footer class="footer-container">
+          <div class="footer">
+            <div class="company-info-blocks block-owner">
+              <p class="company-info-title primary-title">
+                Imans Technology LLC
+              </p>
+              <p class="company-info-title">Registration number:445693330</p>
+            </div>
+            <div class="company-info-blocks block-cooperation">
+              <p class="company-info-title">
+                По вопросам сотрудничества просьба обращатьсяпо электронной
+                почте:
+                <span
+                  class="copy-email"
+                  data-email=" hello@igamingmanagement.io"
+                >
+                  hello@igamingmanagement.io</span
+                >
+              </p>
+            </div>
+            <div class="company-info-blocks">
+              <p class="company-info-title primary-title">
+                Georgia, Batumi, Jiuli Shartava avenue 22
+              </p>
+              <p class="company-info-title">
+                Kenya, Nairobi, Westland, Muthithi Road 42
+              </p>
+            </div>
+            <div class="company-info-blocks">
+              <p class="company-info-title primary-title">
+                Founder IGaming Management | Mikhail Mazanov
+              </p>
+              <a
+                class="company-info-title"
+                href="http://www.mikhailmazanov.com/"
+                target="_blank"
+              >
+                http://www.mikhailmazanov.com/
+              </a>
+            </div>
+          </div>
+        </footer>
+
+        <div class="overlay" onclick="overlayClose()"></div>
+        <div class="popup_background">
+          <div class="popup_menu">
+            <div class="popup_logo">
+              <img src="./assets/img/Logo IGaming Management2.svg" alt="Logo" />
+            </div>
+            <h2 class="popup-title">Оставьте свой номер телефона и Email</h2>
+            <p class="popup-text">Чтобы мы могли связаться с Вами</p>
+            <form
+              class="form"
+              name="myForm"
+              onSubmit="handleSubmit(event, window.location.href)"
+            >
+              <div class="download-modal_inputs">
+                <!-- <input type="hidden" name="_csrf" value="{{csrfToken}}" /> -->
+                <label>
+                  <input
+                    type="text"
+                    name="name"
+                    autocomplete="off"
+                    placeholder="Имя"
+                    minlength="2"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <input
+                    type="text"
+                    name="phone"
+                    autocomplete="off"
+                    placeholder="7 (999) 99-99-99"
+                    pattern="[0-9]*"
+                    required
+                  />
+                </label>
+
+                <label>
+                  <input
+                    type="email"
+                    name="email"
+                    autocomplete="off"
+                    placeholder="ivanov.m@gmail.com"
+                    pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}"
+                    required
+                  />
+                </label>
+
+                <button class="download-modal-btn" type="submit">
+                  отправить заявку
+                </button>
+              </div>
+            </form>
+            <div class="private-info-wrapper">
+              <label class="checkbox-label">
+                <input type="checkbox" required class="checkbox" />
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="18"
+                  height="18"
+                  viewBox="0 0 18 18"
+                  fill="none"
+                >
+                  <rect
+                    opacity="0.3"
+                    x="0.5"
+                    y="0.5"
+                    width="17"
+                    height="17"
+                    rx="1.5"
+                    stroke="white"
+                  />
+                  <path
+                    opacity="0.3"
+                    d="M4.17964 8.65653L7.08747 12.0904C7.52482 12.6068 8.33818 12.5488 8.69777 11.9755L12.6809 5.6247"
+                    stroke="white"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </label>
+              <div class="private-info-text">
+                Я ознакомлен и согласен с
+                <a href="https://imans.io/Policy.pdf" target="_blank"
+                  >условиями политики конфиденциальности</a
+                >
+              </div>
+              <span class="btn-close" onClick="closePopup()">
+                <img src="./assets/img/close.svg" alt="" />
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="popup_background">
+          <div class="popup_menu-gratitude">
+            <div class="popup_logo">
+              <img src="./assets/img/Logo IGaming Management2.svg" alt="Logo" />
+            </div>
+            <h2 class="popup-title">
+              Благодарим вас за обращение в нашу компанию
+            </h2>
+            <p class="popup-text">
+              Ваша заявка принята. Наши специалисты будут рады ответить
+              на все ваши вопросы и  предоставить всю необходимую вам информацию
+            </p>
+            <span class="btn-close" onClick="gratitudeClosePopup()">
+              <img src="./assets/img/close.svg" alt="" />
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="/js/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </body>
+</html>
