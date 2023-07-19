@@ -1,0 +1,55 @@
+<div class="nav-bar-mobile-overlay" onClick="hideMobileMenu()"></div>
+<div class="nav-bar-mobile hidden">
+  <div>
+    <div class="nav-bar-mobile-header">
+      <div class="lang_block">
+        <ul class="dropdown-lang">
+          <li class="dropdown-li">
+            <div class="active_langs dropdown-li">
+              <span class="lang-title">{{first_lang}}</span>
+              <img class="arrow-down" src="./assets/img/arrow_down.svg" alt="arrow-down" />
+            </div>
+            <div class="disabled_langs main-dropdown-menu" style="display: none">
+              <a href="#" onClick="changeLanguage(event,'{{second_lang}}')">
+                <span class="lang-title">{{second_lang}}</span>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <span class="btn-close" onClick="hideMobileMenu()">
+        <img src="./assets/img/close2.svg" alt="" />
+      </span>
+    </div>
+
+    <div class="nav-bar-mobile-menu">
+      <div class="nav-bar-mobile-menu-items">
+        <a href="#block-slider">{{how_to_help}} </a>
+        <img src="./assets/img/arrow_up_right2.svg" alt="" />
+      </div>
+      <div class="nav-bar-mobile-menu-items">
+        <a href="#block-project">{{hire_team}}</a>
+        <img src="./assets/img/arrow_up_right2.svg" alt="" />
+      </div>
+      <div class="nav-bar-mobile-menu-items">
+        <a href="#block-project">{{choose_proj}} </a>
+        <img src="./assets/img/arrow_up_right2.svg" alt="" />
+      </div>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <a class="contact_us">{{login}}</a>
+    <a class="contact_us">{{registration}}</a>
+  </div>
+</div>
+  <div class="block_video">
+      <video src="./assets/video/Video1.mp4" autoplay muted playsinline loop></video>
+  </div>
+<div class="content-block">
+  {{> header}}
+  {{> main}}
+  {{> footer}}
+  {{> modal}}
+</div>

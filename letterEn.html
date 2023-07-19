@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        outline: none;
+      }
+
+      a {
+        text-decoration: none;
+        list-style: none;
+        color: #ededed;
+      }
+
+      .main {
+        font-family: "Inter-Regular", sans-serif;
+        color: #ededed;
+        font-size: 14px;
+        line-height: 120%;
+      }
+
+      .email-background {
+        max-width: 600px;
+        background-color: #141414;
+        margin: 0 auto;
+        padding: 73px 54px 87px 51.5px;
+        text-align: center;
+      }
+
+      .title {
+        margin-bottom: 80px;
+      }
+
+      .content-contacts {
+        margin-right: 44px;
+      }
+
+      .contacts-title {
+        text-align: left;
+        margin-bottom: 33px;
+      }
+
+      /* @media only screen and (max-width: 475px) {
+        .email-background {
+          max-width: 320px;
+          height: 511px;
+          padding: 24px 20px 51px 20px;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column-reverse;
+        }
+
+        .content-contacts {
+          display: flex;
+          align-items: flex-start;
+        }
+
+        .content-text {
+          text-align: left;
+        }
+
+        .title {
+          margin-bottom: 25px;
+        }
+
+        .title-text {
+          margin-bottom: 40px;
+        }
+
+        .contacts-title {
+          margin-bottom: 0;
+        }
+
+        .region-social-links {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          margin-bottom: 25px;
+        }
+
+        .mob-contacts {
+          margin-left: 112px;
+        }
+      } */
+    </style>
+  </head>
+
+  <body class="main">
+    <table
+      border="0"
+      cellspacing="0"
+      cellpadding="0"
+      width="100%"
+      style="max-width: 590px"
+    >
+      <tr>
+        <td align="center">
+          <div
+            class="popup_menu-gratitude"
+            style="
+              font-family: 'Raleway', sans-serif;
+              font-style: normal;
+              color: #000000;
+              background-color: #f0f0f0;
+              border-radius: 20px;
+              padding: 40px 60px;
+            "
+          >
+            <div
+              class="popup_logo"
+              style="
+                display: flex;
+                justify-content: center;
+                margin-bottom: 48px;
+              "
+            >
+              <img
+                src="./assets/img/Logo IGaming Management2.svg"
+                alt="Logo"
+                style="width: 270px; height: 39px; margin-right: auto"
+              />
+            </div>
+            <h2
+              class="popup-title"
+              style="
+                font-family: 'Mulish', sans-serif;
+                font-size: 24px;
+                line-height: 120%;
+                margin-bottom: 10px;
+              "
+            >
+              Thank you for contacting our company
+            </h2>
+            <p
+              class="popup-text"
+              style="
+                font-size: 18px;
+                font-weight: 400;
+                line-height: 140%;
+                margin-bottom: 40px;
+              "
+            >
+              Your application has been accepted. Our specialists will be happy
+              to answer all your questions and provide you with all the
+              information you need
+            </p>
+            <span
+              class="btn-close"
+              onClick="gratitudeClosePopup()"
+              style="
+                position: absolute;
+                top: 42px;
+                right: 62px;
+                cursor: pointer;
+              "
+            >
+              <img
+                src="./assets/img/close.svg"
+                alt=""
+                style="width: 16px; height: 16px"
+              />
+            </span>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

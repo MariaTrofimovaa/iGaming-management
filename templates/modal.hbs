@@ -1,0 +1,115 @@
+<div class="overlay" onclick="overlayClose()"></div>
+<div class="popup_background">
+  <div class="popup_menu">
+    <div class="popup_logo">
+      <img src="./assets/img/Logo IGaming Management2.svg" alt="Logo" />
+    </div>
+    <h2 class="popup-title">{{modal_title}}</h2>
+    <p class="popup-text">{{modal_text}}</p>
+
+    <form
+      class="form"
+      name="myForm"
+      onSubmit="handleModalFormSubmit(event, window.location.href)"
+    >
+      <div class="download-modal_inputs">
+        <!-- <input type="hidden" name="_csrf" value="{{csrfToken}}" /> -->
+        <label>
+          <input
+            type="text"
+            name="name"
+            autocomplete="off"
+            placeholder={{name}}
+            minlength="2"
+            required
+          />
+        </label>
+
+        <label>
+          <input
+            type="text"
+            name="phone"
+            autocomplete="off"
+            placeholder="7 (999) 99-99-99"
+            pattern="[0-9]*"
+            required
+          />
+        </label>
+
+        <label>
+          <input
+            type="email"
+            name="email"
+            autocomplete="off"
+            placeholder="ivanov.m@gmail.com"
+            pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}"
+            required
+          />
+        </label>
+
+        <button class="download-modal-btn" type="submit">
+          {{send_enquiry}}
+        </button>
+      </div>
+    </form>
+
+    <div class="private-info-wrapper">
+      <span>
+        <img class="checkbox" src="./assets/img/check_box_popup.svg" alt="" />
+      </span>
+      {{! <label class="checkbox-label">
+        <input type="checkbox" required class="checkbox" />
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          viewBox="0 0 18 18"
+          fill="none"
+        >
+          <rect
+            opacity="0.3"
+            x="0.5"
+            y="0.5"
+            width="17"
+            height="17"
+            rx="1.5"
+            stroke="white"
+          />
+          <path
+            opacity="0.3"
+            d="M4.17964 8.65653L7.08747 12.0904C7.52482 12.6068 8.33818 12.5488 8.69777 11.9755L12.6809 5.6247"
+            stroke="white"
+            stroke-linecap="round"
+          />
+        </svg>
+      </label> }}
+      <div class="private-info-text">
+        {{privacy}}
+        <a
+          href="https://imans.io/Policy.pdf"
+          target="_blank"
+        >{{privacy_link}}</a>
+      </div>
+      <span class="btn-close" onClick="closePopup()">
+        <img src="./assets/img/close.svg" alt="" />
+      </span>
+    </div>
+  </div>
+</div>
+
+<div class="popup_background">
+  <div class="popup_menu-gratitude">
+    <div class="popup_logo">
+      <img src="./assets/img/Logo IGaming Management2.svg" alt="Logo" />
+    </div>
+    <h2 class="popup-title">
+      {{gratitude_popup_title}}
+    </h2>
+    <p class="popup-text">
+      {{gratitude_popup_text}}
+    </p>
+    <span class="btn-close" onClick="gratitudeClosePopup()">
+      <img src="./assets/img/close.svg" alt="" />
+    </span>
+  </div>
+</div>

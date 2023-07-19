@@ -1,0 +1,245 @@
+<header class="header">
+  <div class="nav-bar">
+    <img
+      class="logo"
+      src="./assets/img/Logo IGaming Management.svg"
+      alt="Logo"
+    />
+
+    <div onClick="toggleMobileMenu()">
+      <img class="menu-icon" src="./assets/img/menu.svg" alt="Icon-menu" />
+    </div>
+    <a href="#block-slider">{{how_to_help}} </a>
+    <a href="#block-project">{{hire_team}}</a>
+    <a href="#block-project">{{choose_proj}} </a>
+
+    <div class="lang_block">
+      <ul class="dropdown-lang">
+        <li class="dropdown-li">
+          <div class="active_langs dropdown-li">
+            <span class="lang-title">{{first_lang}}</span>
+            <img
+              class="arrow-down"
+              src="./assets/img/arrow_down.svg"
+              alt="arrow-down"
+            />
+          </div>
+          <div class="disabled_langs main-dropdown-menu" style="display: none">
+            <a href="#" onClick="changeLanguage(event,'{{second_lang}}')">
+              <span class="lang-title">{{second_lang}}</span>
+            </a>
+          </div>
+        </li>
+      </ul>
+      <div class="buttons">
+        <a class="contact_us">{{login}}</a>
+        <a class="contact_us">{{registration}}</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="header-about">
+    <h1 class="title">
+      {{title}}
+    </h1>
+    <div class="header-about-text">
+      <div class="text-container">
+        <p class="">
+          <img src="./assets/img/icon_Group2.svg" alt="Icon group" />
+          {{talent_text}}
+        </p>
+      </div>
+
+      <div class="text-container">
+        <p class="">
+          <img src="./assets/img/icon_Profile_Add.svg" alt="Иконка проверки" />
+          {{specialists_text}}
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-container">
+
+    <form
+      class="header-form"
+      name="headerForm"
+      onSubmit="handleHeaderFormSubmit(event, window.location.href)"
+    >
+      <!-- <div> -->
+      <!-- <input type="hidden" name="_csrf" value="{{csrfToken}}" /> -->
+      <label>
+        <input
+          type="text"
+          name="name"
+          autocomplete="off"
+          placeholder={{name}}
+          minlength="2"
+          required
+        />
+      </label>
+
+      <label>
+        <input
+          type="text"
+          name="phone"
+          autocomplete="off"
+          placeholder="7 (999) 99-99-99"
+          pattern="[0-9]*"
+          required
+        />
+      </label>
+
+      <label>
+        <input
+          type="email"
+          name="email"
+          autocomplete="off"
+          placeholder="ivanov.m@gmail.com"
+          pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,4}"
+          required
+        />
+      </label>
+
+      <button class="form-btn" type="submit">{{send_enquiry}}</button>
+      <!-- </div> -->
+    </form>
+
+    <div class="form-container-footer">
+      <div class="form-container-footer-text">
+        <p>
+          <img src="./assets/img/icon_Group3.svg" alt="Icon group" />
+          {{form_team}}
+        </p>
+        <p>
+          <img
+            src="./assets/img/icon_Profile_Accepted.svg"
+            alt="Icon profile"
+          />
+          {{form_pm}}
+        </p>
+      </div>
+
+      <div class="private-info-text">
+        <span>
+          <img class="checkbox" src="./assets/img/check_box.svg" alt="" />
+        </span>
+        {{! <label class="custom-checkbox">
+          <input type="checkbox" required class="checkbox" />
+          <span class="checkmark"></span>
+        </label> }}
+        <span>
+          {{privacy}}
+          <a href="https://imans.io/Policy.pdf" target="_blank">
+            {{privacy_link}}</a>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee">
+    <div class="marquee-content">
+      <span>
+        <img
+          class="img"
+          src="./assets/img/partners/logo_imans.png"
+          alt="Логотип 1"
+          style="width: 126px; height: 25px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_hello_africa.png"
+          alt="Логотип 2"
+          style="width: 214px; height: 36px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_puma.png"
+          alt="Логотип 8"
+          style="width: 99px; height: 25px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_hello_georgia.png"
+          alt="Логотип 3"
+          style="width: 266px; height: 36px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_b2b_gambling.png"
+          alt="Логотип 4"
+          style="width: 155px; height: 36px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_bacon_games.png"
+          alt="Логотип 5"
+          style="width: 110px; height: 25px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_eclipse.png"
+          alt="Логотип 6"
+          style="width: 100px; height: 44px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_moyo.png"
+          alt="Логотип 7"
+          style="width: 100px; height: 36px"
+        />
+      </span>
+      <span>
+        <img
+          class="img"
+          src="./assets/img/partners/logo_imans.png"
+          alt="Логотип 1"
+          style="width: 126px; height: 25px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_hello_africa.png"
+          alt="Логотип 2"
+          style="width: 214px; height: 36px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_puma.png"
+          alt="Логотип 8"
+          style="width: 99px; height: 25px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_hello_georgia.png"
+          alt="Логотип 3"
+          style="width: 266px; height: 36px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_b2b_gambling.png"
+          alt="Логотип 4"
+          style="width: 155px; height: 36px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_bacon_games.png"
+          alt="Логотип 5"
+          style="width: 204px; height: 25px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_eclipse.png"
+          alt="Логотип 6"
+          style="width: 100px; height: 44px"
+        />
+        <img
+          class="img"
+          src="./assets/img/partners/logo_moyo.png"
+          alt="Логотип 7"
+          style="width: 100px; height: 36px"
+        />
+      </span>
+    </div>
+  </div>
+
+</header>
