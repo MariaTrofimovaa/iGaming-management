@@ -46,20 +46,26 @@ body {
     justify-content: space-between;
     width: 100%;
     height: 100vh;
-    // height: 812px;
-    padding: 38.5px 17px 40px 18px;
-    background-color: $accent-color;
 
-    // transition: transform 0.4s ease-in-out;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
     z-index: 9999;
+    transition: transform 0.4s ease-in-out;
 
-    position: fixed;
-    top: -90px;
-    padding-bottom: 90px;
-    transform: translateY(90px);
+    .nav-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: 100vh;
+      padding: 38.5px 17px 40px 18px;
+      position: fixed;
+      top: -90px;
+      padding-bottom: 90px;
+      transform: translateY(90px);
+      background-color: $accent-color;
+    }
 
     &-header {
       display: flex;
@@ -160,16 +166,13 @@ body {
     vertical-align: middle;
     position: absolute;
     left: 50%;
-    // top: 50%;
-    // transform: translate(-50%, -50%);
-    top: 100%; /* Отступ сверху на 100% экрана */
+    top: 100%;
     transform: translateX(-50%);
 
     max-height: calc(100vh - 50px);
     margin: 0 auto;
     max-width: 590px;
     width: 100%;
-    // height: 100%;
     z-index: 25;
     box-sizing: border-box;
     background-color: $secondary-text-color;
@@ -197,7 +200,6 @@ body {
       font-family: "Mulish", sans-serif;
       font-size: 24px;
       font-style: normal;
-      // font-weight: 600;
       line-height: 120%;
       margin-bottom: 10px;
     }
@@ -245,15 +247,9 @@ body {
         margin-bottom: 0;
       }
 
-      // .input-title {
-      //   color: $popup-color;
-      // }
-
       input {
         width: 100%;
         height: 70px;
-        // color: $popup-color;
-        // border: 1px solid $popup-color;
         padding: 32px;
 
         border-radius: 300px;
@@ -266,14 +262,12 @@ body {
         font-weight: 500;
         line-height: 140%;
         letter-spacing: 0.84px;
-        // opacity: 0.5;
       }
 
       .download-modal-btn {
         width: 100%;
         max-width: 225px;
         height: 70px;
-        // margin-top: 25.58px;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -299,7 +293,6 @@ body {
 
     .private-info-wrapper {
       display: flex;
-      // justify-content: flex-end;
       align-items: center;
       margin-top: 10px;
     }
@@ -307,17 +300,14 @@ body {
       width: 18px;
       height: 18px;
       margin-right: 14px;
-      // background-color: #527bef;
     }
 
     .private-info-text {
-      // max-width: 250px;
       font-style: normal;
       font-weight: 400;
       font-size: 12px;
       line-height: 140%;
       color: rgba(7, 7, 7, 0.5);
-      // opacity: 0.5;
 
       a {
         text-decoration: none;
@@ -387,9 +377,7 @@ body {
   .preloader {
     position: fixed;
     z-index: 999999;
-    // background-color: #c2bdbd;
-    // background-color: $light-blue-color;
-    background-color: #ffffff;
+    background-color: #000;
 
     top: 0;
     left: 0;
@@ -452,7 +440,6 @@ body {
 
   .section {
     width: 100%;
-    // height: 100vh;
     position: relative;
     overflow: hidden;
 
@@ -474,9 +461,8 @@ body {
 
     .content-block {
       height: 100%;
-      overflow-y: auto; /* Лучше 'auto' вместо 'scroll' */
-      // overflow-y: scroll;
-      height: calc(100% - 20px); /* Изменить на нужную вам высоту */
+      overflow-y: auto;
+      height: calc(100% - 20px);
 
       .container {
         max-width: 1920px;
@@ -931,13 +917,11 @@ body {
 
       .main {
         .slider-container {
-          // position: relative;
-          overflow: hidden; /* Скрыть часть следующего слайда, который уходит за контейнер */
-          // overflow: visible;
+          overflow: hidden;
           width: 100%;
           margin: 0 auto;
           max-width: 1200px;
-          // margin-left: 360px;
+          // background-color: rgb(212, 241, 239);
           padding: 277px 0 200px 0;
 
           display: flex;
@@ -946,7 +930,7 @@ body {
           .slider-left {
             display: flex;
             width: 100%;
-            max-width: 550px;
+            max-width: 332px;
             flex-direction: column;
             justify-content: space-between;
             margin-right: 92px;
@@ -989,7 +973,7 @@ body {
                 }
 
                 .current-slide-total {
-                  color: #cdd3dc; /* Устанавливаем прозрачность для числа "07" */
+                  color: #cdd3dc;
                 }
               }
 
@@ -1000,60 +984,173 @@ body {
                 .next-button {
                   background: none;
                   border: none;
-                  cursor: pointer;
+
                   width: 50px;
                   height: 50px;
-                  // margin: 0 10px;
+                }
+                .next-button {
+                  position: relative;
+                  margin-left: 10px;
+
+                  .hover-icon {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                  }
+
+                  &:hover {
+                    cursor: pointer;
+                    .default-icon {
+                      display: none;
+                    }
+                    .hover-icon {
+                      display: block;
+                    }
+                  }
+
+                  .inactive-icon {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    cursor: default;
+                  }
+                }
+
+                .prev-button {
+                  position: relative;
+                  .default-icon-prev {
+                    cursor: default;
+                  }
+
+                  .hover-icon-prev {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                  }
+
+                  .active-icon-prev {
+                    display: none;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    &:hover {
+                      cursor: pointer;
+                      display: none;
+                      .hover-icon-prev {
+                        display: block;
+                      }
+                    }
+                  }
+                  // .active-icon-prev {
+                  //   display: none;
+                  //   position: absolute;
+                  //   top: 0;
+                  //   left: 0;
+                  // }
+
+                  // &.active {
+                  //   .default-icon-prev {
+                  //     display: none;
+                  //   }
+
+                  //   .active-icon-prev {
+                  //     display: block;
+                  //   }
+                  // }
+
+                  // &:hover {
+                  //   .active-icon-prev {
+                  //     display: none;
+                  //   }
+
+                  //   .hover-icon-prev {
+                  //     display: block;
+                  //   }
+                  // }
                 }
               }
             }
           }
 
-          .slider {
-            // position: relative;
-            width: 100%; /* Занимать всю доступную ширину */
+          .invisible {
+            position: relative;
+            width: 100%;
+            max-width: 776px;
+            height: 577px;
+            padding: 60px;
+            border-radius: 20px;
+          }
+
+          .slider-wrapper {
+            width: 100%;
             display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
 
-            // overflow-y: hidden;
-            // flex-wrap: nowrap;
-            // white-space: nowrap;
-            // overflow-x: auto; /* Добавляем горизонтальную прокрутку */
-            // scroll-snap-type: x mandatory; /* Включаем привязку прокрутки к слайдам */
-            // transform: translateX(30%); /* Центрировать слайды */
-            // overscroll-behavior-x: contain;
-            // -webkit-overflow-scrolling: touch; // For iOS
-            // scroll-behavior: smooth;
-            // list-style-type: none;
+          .slider-lines-container {
+            position: relative;
+            width: 100%;
+            // max-width: 776px;
+            display: flex;
+            margin-top: 70px;
+            // overflow: hidden; /* Добавляем этот стиль, чтобы обрезать выходящую за контейнер линию */
 
+            /* Контейнер для линий */
+            .slider-lines {
+              width: 100%;
+              // max-width: 776px;
+              // display: flex;
+              // align-items: center;
+
+              /* Длинная линия */
+              .slider-line-long {
+                // flex: 1;
+                width: 100%;
+                // max-width: 776px;
+                height: 2px;
+                background-color: $accent-color;
+                opacity: 0.5;
+              }
+
+              /* Маленькая линия */
+              .slider-line-small {
+                height: 4px;
+                background-color: $accent-color;
+                z-index: 1;
+                transition: left 1s ease;
+                position: absolute;
+                top: -1px;
+                left: 0;
+              }
+            }
+          }
+
+          .slider {
+            // position: relative; // для линии под слайдом
+            width: 100%;
+            display: flex;
             font-family: "Raleway", sans-serif;
             font-size: 18px;
             font-style: normal;
           }
 
           .slide {
+            position: relative;
             width: 100%;
-            width: 776px;
+            max-width: 776px;
             height: 577px;
             padding: 60px;
             border-radius: 20px;
             background: $accent-color;
             color: $secondary-text-color;
             scroll-snap-align: start; /* Привязываем слайды к началу прокрутки */
-            // margin-bottom: 41px;
-            // border-bottom: 2px solid $accent-color;
-            animation-name: fade;
-            animation-duration: 1.5s;
-
-            // margin-right: 60px; /* Отступ слайда, чтобы он перекрывал следующий */
-            // transition: margin-right 0.4s ease-in-out;
-
-            // position: absolute;
-            // top: 0;
-            // left: 0;
-            // height: 100%;
-            // opacity: 0;
-            // pointer-events: none;
-            // transition: opacity 0.5s ease;
+            transition: opacity 2s ease;
+            opacity: 1;
 
             &-title {
               font-family: "Mulish", sans-serif;
@@ -1095,24 +1192,12 @@ body {
             }
           }
 
-          // .slide.active {
-          //   opacity: 1;
-          //   pointer-events: auto;
-          // }
-
-          // .slide.next {
-          //   left: 100%; /* Слайд находится за пределами контейнера */
-          //   transition: left 0.5s ease; /* Плавное перемещение слайда внутрь контейнера */
-          // }
-
-          // .slide.previous {
-          //   left: -100%; /* Слайд находится за пределами контейнера */
-          //   transition: left 0.5s ease; /* Плавное перемещение слайда внутрь контейнера */
-          // }
+          .slide1 {
+            position: absolute;
+          }
 
           .slide2 {
             background: $slider-color;
-            // margin-right: -570px;
 
             .slide-title {
               max-width: 453px;
@@ -1165,18 +1250,20 @@ body {
             }
           }
 
+          .queue {
+            position: absolute;
+          }
+
           .hidden {
             display: none;
+            // opacity: 0; /* Начальное значение прозрачности элемента */
+            // transition: opacity 2s; /* Длительность анимации 1 секунда (переход прозрачности) */
           }
-          // .slider-scrollbar {
-          //   width: 100%;
-          //   height: 10px; /* Adjust the height as needed */
-          //   background-color: #ccc; /* Gray background color for the scrollbar */
-          //   overflow-x: auto; /* Enable horizontal scrolling for the scrollbar */
-          //   scrollbar-color: #999 #ccc; /* Adjust scrollbar color as needed */
-          //   scrollbar-width: thin; /* Adjust scrollbar width as needed (thin or auto) */
-          //   margin-top: 15px; /* Adjust the distance from the slider */
-          // }
+
+          .fade-out {
+            opacity: 0;
+            transition: opacity 2s;
+          }
         }
 
         .block-about {
@@ -1283,7 +1370,7 @@ body {
             background-color: $slider-color;
             border-radius: 20px;
             padding: 20px;
-            width: 360px;
+            max-width: 360px;
             height: 287px;
           }
 
@@ -1651,8 +1738,7 @@ body {
           width: 100%;
           max-width: 1200px;
           margin: 0 auto;
-          padding: 200px 0 200px 0;
-          // padding: 200px 360px 200px 360px;
+          padding: 0 0 200px 0;
           display: flex;
           justify-content: space-between;
           &-title {
@@ -1815,7 +1901,8 @@ body {
               font-size: 24px;
               font-weight: 700;
               line-height: 140%;
-              margin-right: 128px;
+              margin-right: 150px;
+              max-width: 288px;
             }
 
             &-links {
@@ -1843,6 +1930,8 @@ body {
                   font-size: 18px;
                   font-weight: 400;
                   line-height: 140%;
+                  display: block;
+                  width: 170px;
                 }
 
                 &:last-of-type {
@@ -1914,12 +2003,12 @@ body {
             margin-right: 20px;
           }
 
-          .block-owner {
-            max-width: 205px;
-          }
+          // .block-owner {
+          //   max-width: 205px;
+          // }
 
           .block-cooperation {
-            width: 250px;
+            width: 303px;
           }
 
           &-title {
@@ -1939,6 +2028,147 @@ body {
             border-radius: 4px;
             font-size: 12px;
             color: #555555;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    .section {
+      .content-block {
+        .header {
+          .nav-bar {
+            max-width: 1100px;
+            .logo {
+              margin-right: 45px;
+            }
+            a {
+              margin-right: 15px;
+              // font-size: 11px;
+              &:last-of-type {
+                margin-right: 44px;
+              }
+            }
+          }
+
+          .form-container {
+            max-width: 1100px;
+            .header-form {
+              label {
+                margin-right: 15px;
+              }
+            }
+          }
+        }
+        .main {
+          .slider-container {
+            max-width: 1100px;
+            .slider-left {
+              max-width: 320px;
+            }
+
+            .invisible {
+              position: relative;
+              width: 100%;
+              max-width: 690px;
+              height: 577px;
+              padding: 60px;
+              border-radius: 20px;
+            }
+
+            .slide {
+              max-width: 690px;
+              height: 577px;
+              padding: 45px;
+            }
+
+            .slide1 {
+              position: absolute;
+              .slide-text {
+                margin-bottom: 100px;
+              }
+            }
+
+            .slide2 {
+              .slide-text {
+                margin-bottom: 50px;
+              }
+            }
+
+            .slide3 {
+              .slide-text {
+                margin-bottom: 103px;
+              }
+            }
+
+            .slide4 {
+              .slide-text {
+                margin-bottom: 144px;
+              }
+            }
+
+            .slide6 {
+              .slide-text {
+                margin-bottom: 5px;
+              }
+            }
+
+            .slide7 {
+              &-title {
+                margin-bottom: 13px;
+              }
+
+              .slide-text {
+                margin-bottom: 27px;
+              }
+            }
+
+            .queue {
+              position: absolute;
+            }
+
+            .hidden {
+              display: none;
+            }
+          }
+
+          .block-about {
+            .about-container {
+              max-width: 1100px;
+            }
+          }
+
+          .block-process {
+            max-width: 1100px;
+            grid-gap: 27px;
+          }
+
+          .block-project {
+            &-background {
+              max-width: 1100px;
+            }
+          }
+
+          .block-specialists {
+            max-width: 1100px;
+          }
+
+          .block-education {
+            max-width: 1100px;
+          }
+
+          .block-contacts {
+            max-width: 1100px;
+            &-title {
+              margin-right: 50px;
+            }
+          }
+
+          .footer-container {
+            .footer {
+              max-width: 1100px;
+            }
           }
         }
       }
@@ -2146,7 +2376,6 @@ body {
 
         .main {
           .slider-container {
-            // padding: 0 17px 0 18px;
             padding: 36px 17px 80px 18px;
             flex-direction: column;
 
@@ -2159,6 +2388,11 @@ body {
               }
             }
 
+            // .slider-wrapper {
+            //   width: 100%;
+            //   display: flex;
+            //   flex-direction: column;
+            //   align-items: center;
             .slider {
               display: flex;
               flex-direction: column;
@@ -2166,98 +2400,188 @@ body {
               .arrows-slider {
                 display: flex;
                 justify-content: space-between;
-                // margin-left: 215px; // to fix
+                margin-top: 17px;
                 max-width: 340px;
 
                 align-items: end;
-              }
-              .current-slide {
-                margin-left: 28px;
 
-                .current-slide-separator {
-                  margin: 0 -5px; /* Отступы по бокам отделителя */
-                  color: #cdd3dc;
+                .slider_btns {
+                  display: flex;
+
+                  .prev-button,
+                  .next-button {
+                    background: none;
+                    border: none;
+
+                    width: 50px;
+                    height: 50px;
+                    // margin: 0 10px;
+                  }
+                  .next-button {
+                    position: relative;
+                    margin-left: 10px;
+
+                    .hover-icon {
+                      display: none;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                    }
+
+                    &:hover {
+                      cursor: pointer;
+                      .default-icon {
+                        display: none;
+                      }
+                      .hover-icon {
+                        display: block;
+                      }
+                    }
+
+                    .inactive-icon {
+                      display: none;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                      cursor: default;
+                    }
+                  }
+                  .prev-button {
+                    position: relative;
+                    margin-left: 10px;
+
+                    .hover-icon-prev {
+                      display: none;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                    }
+
+                    .default-icon-prev {
+                      cursor: default;
+                    }
+
+                    .active-icon-prev {
+                      display: none;
+                      position: absolute;
+                      top: 0;
+                      left: 0;
+                    }
+
+                    &.active {
+                      .default-icon-prev {
+                        display: none;
+                      }
+
+                      .active-icon-prev {
+                        display: block;
+                      }
+                    }
+
+                    &:hover {
+                      .active-icon-prev {
+                        display: none;
+                      }
+
+                      .hover-icon-prev {
+                        display: block;
+                      }
+                    }
+                  }
+                }
+                .current-slide {
+                  margin-left: 28px;
+
+                  .current-slide-separator {
+                    margin: 0 -5px; /* Отступы по бокам отделителя */
+                    color: #cdd3dc;
+                  }
+
+                  .current-slide-total {
+                    color: #cdd3dc; /* Устанавливаем прозрачность для числа "07" */
+                  }
+                }
+              }
+
+              .invisible {
+                max-width: 340px;
+                height: 698px;
+                padding: 32px 16px;
+                margin: 0 auto 52px;
+              }
+              .slide {
+                max-width: 340px;
+                height: 698px;
+                padding: 32px 16px;
+                margin: 0 auto 52px;
+
+                &-title {
+                  font-size: 18px;
                 }
 
-                .current-slide-total {
-                  color: #cdd3dc; /* Устанавливаем прозрачность для числа "07" */
+                &-text {
+                  font-size: 16px;
+                }
+
+                &-list {
+                  font-size: 16px;
+
+                  &-box {
+                    align-items: flex-start;
+                  }
                 }
               }
-              .slider_btns {
-                display: flex;
-                // margin-right: 22px;
-                .prev-button,
-                .next-button {
-                  background: none;
-                  border: none;
-                  cursor: pointer;
-                  width: 50px;
-                  height: 50px;
-                  // margin: 0 10px;
+
+              .slide1 {
+                .slide-text {
+                  margin-bottom: 156px;
                 }
               }
-            }
 
-            .slide {
-              max-width: 340px;
-              height: 698px;
-              padding: 32px 16px;
-              margin: 0 auto 52px;
-
-              &-title {
-                font-size: 18px;
-              }
-
-              &-text {
-                font-size: 16px;
-                margin-bottom: 156px;
-              }
-
-              &-list {
-                font-size: 16px;
-
-                &-box {
-                  align-items: flex-start;
+              .slide2 {
+                .slide-text {
+                  margin-bottom: 89px;
                 }
               }
-            }
 
-            .slide2 {
-              .slide-text {
-                margin-bottom: 89px;
-              }
-            }
-            .slide3 {
-              .slide-text {
-                margin-bottom: 220px;
-              }
-            }
-            .slide4 {
-              .slide-text {
-                margin-bottom: 256px;
-              }
-            }
-
-            .slide6 {
-              .slide-title {
-                margin-bottom: 16px;
+              .slide3 {
+                .slide-text {
+                  margin-bottom: 220px;
+                }
               }
 
-              .slide-text {
-                font-size: 15px;
-                margin-bottom: 15px;
+              .slide4 {
+                .slide-text {
+                  margin-bottom: 256px;
+                }
               }
 
-              .slide-list {
-                font-size: 15px;
-              }
-            }
+              .slide6 {
+                .slide-title {
+                  margin-bottom: 16px;
+                }
 
-            .slide7 {
-              .slide-text {
-                margin-bottom: 22px;
+                .slide-text {
+                  font-size: 15px;
+                  margin-bottom: 15px;
+                }
+
+                .slide-list {
+                  font-size: 15px;
+                }
+              }
+
+              .slide7 {
+                .slide-text {
+                  margin-bottom: 22px;
+                }
+              }
+
+              .slider-lines-container {
+                margin-top: 0;
               }
             }
+            // }
           }
 
           .block-about {
@@ -2308,7 +2632,7 @@ body {
             padding: 80px 0 80px 0;
             max-width: 340px;
             margin: 0 auto;
-
+            grid-gap: 60px;
             &-title {
               font-size: 20px;
             }
@@ -2458,6 +2782,7 @@ body {
               &-text {
                 margin-bottom: 24px;
                 margin-right: 0;
+                font-size: 16px;
 
                 &:last-of-type {
                   margin-bottom: 0;
@@ -2562,44 +2887,9 @@ body {
       .content-block {
         .main {
           .slider-container {
-            // padding: 0 17px 0 18px;
-            // padding: 36px 17px 80px 18px;
-            // flex-direction: column;
-
-            // .slider-left {
-            //   margin-right: 0;
-            //   .slider-title {
-            //     font-size: 20px;
-            //     letter-spacing: 0.8px;
-            //     margin-bottom: 37px;
-            //   }
-            // }
-
             .slider {
-              // display: flex;
-              // flex-direction: column;
-
-              // .arrows-slider {
-              //   display: flex;
-              //   justify-content: space-between;
-              //   // margin-left: 215px; // to fix
-              //   max-width: 340px;
-              // }
-              // .current-slide {
-              //   margin-left: 28px;
-              // }
               .slider_btns {
-                // display: flex;
                 margin-right: 22px;
-                // .prev-button,
-                // .next-button {
-                //   background: none;
-                //   border: none;
-                //   cursor: pointer;
-                //   width: 50px;
-                //   height: 50px;
-                //   // margin: 0 10px;
-                // }
               }
             }
           }

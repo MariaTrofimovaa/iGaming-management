@@ -5,284 +5,322 @@
 
       <div class="arrows-slider">
         <div class="current-slide">
-          <span class="current-slide-number">1</span>
+          <span class="current-slide-number">01</span>
           <span class="current-slide-separator">/</span>
           <span class="current-slide-total">07</span>
         </div>
         <div class="slider_btns">
           <button class="prev-button">
-            <img src="./assets/img/arrow_slider.svg" alt="" />
+            {{! <div class="icons-container"> }}
+            <img
+              class="default-icon-prev"
+              src="./assets/img/arrow_slider_left_not_active.svg"
+              alt=""
+            />
+            <img
+              class="hover-icon-prev"
+              src="./assets/img/arrow_left_hover.svg"
+              alt=""
+            />
+            <img
+              class="active-icon-prev"
+              src="./assets/img/arrow_left_active.svg"
+              alt=""
+            />
+            {{! </div> }}
           </button>
           <button class="next-button">
-            <img src="./assets/img/arrow_slider_right.svg" alt="" />
+            <img
+              class="default-icon"
+              src="./assets/img/arrow_slider_right_active.svg"
+              alt=""
+            />
+            <img
+              class="hover-icon"
+              src="./assets/img/arrow_slider_right_hover.svg"
+              alt=""
+            />
+            <img
+              class="inactive-icon"
+              src="./assets/img/arrow_slider_right_not_active.svg"
+              alt=""
+            />
           </button>
         </div>
       </div>
     </div>
     <div class="slider">
-      <div class="slide">
-        <h2 class="slide-title">
-          {{market_research}}
-        </h2>
-        <p class="slide-text">
-          {{instruments}}
-        </p>
-        <ul class="slide-list">
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{market_analysis}}
-            </li>
-          </div>
+      <div class="slider-wrapper">
+        <div class="invisible"></div>
+        <div class="slide slide1">
+          <h2 class="slide-title">
+            {{market_research}}
+          </h2>
+          <p class="slide-text">
+            {{instruments}}
+          </p>
+          <ul class="slide-list">
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{market_analysis}}
+              </li>
+            </div>
 
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{competitors}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{target_audience}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{uvp}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{market_research_item}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{legal_support}}
-            </li>
-          </div>
-        </ul>
-      </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{competitors}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{target_audience}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{uvp}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{market_research_item}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{legal_support}}
+              </li>
+            </div>
+          </ul>
+        </div>
 
-      <div class="slide slide2 hidden">
-        <h2 class="slide-title">{{recruiting}}</h2>
-        <p class="slide-text">
-          {{recruiting_text}}
-        </p>
-        <ul class="slide-list">
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{candidates}}
-            </li>
-          </div>
+        <div class="slide slide2 hidden">
+          <h2 class="slide-title">{{recruiting}}</h2>
+          <p class="slide-text">
+            {{recruiting_text}}
+          </p>
+          <ul class="slide-list">
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{candidates}}
+              </li>
+            </div>
 
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{multichannel_search}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{interviews}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{training}} </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{reprofiling}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{project_teams}}
-            </li>
-          </div>
-        </ul>
-      </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{multichannel_search}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{interviews}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{training}} </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{reprofiling}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{project_teams}}
+              </li>
+            </div>
+          </ul>
+        </div>
 
-      <div class="slide slide3 hidden">
-        <h2 class="slide-title">{{design}}</h2>
-        <p class="slide-text">
-          {{style}}
-        </p>
-        <ul class="slide-list">
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{web}}</li>
-          </div>
+        <div class="slide slide3 hidden">
+          <h2 class="slide-title">{{design}}</h2>
+          <p class="slide-text">
+            {{style}}
+          </p>
+          <ul class="slide-list">
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{web}}</li>
+            </div>
 
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{concept_creation}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{marketing_materials}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{branding}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{game_design}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{infographics}}
-            </li>
-          </div>
-        </ul>
-      </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{concept_creation}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{marketing_materials}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{branding}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{game_design}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{infographics}}
+              </li>
+            </div>
+          </ul>
+        </div>
 
-      <div class="slide slide4 hidden">
-        <h2 class="slide-title">{{partners_marketing}}</h2>
-        <p class="slide-text">
-          {{partnership}}
-        </p>
-        <ul class="slide-list">
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{content_partnership}}</li>
-          </div>
+        <div class="slide slide4 hidden">
+          <h2 class="slide-title">{{partners_marketing}}</h2>
+          <p class="slide-text">
+            {{partnership}}
+          </p>
+          <ul class="slide-list">
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{content_partnership}}</li>
+            </div>
 
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{cross}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{cpa}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{affiliate}}</li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">{{outreach}}</li>
-          </div>
-        </ul>
-      </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{cross}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{cpa}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{affiliate}}</li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">{{outreach}}</li>
+            </div>
+          </ul>
+        </div>
 
-      <div class="slide slide5 hidden">
-        <h2 class="slide-title">{{influence_marketing}}</h2>
-        <p class="slide-text">
-          {{IGaming}}
-        </p>
-        <p class="slide-text">
-          {{blogger}}
-        </p>
-      </div>
+        <div class="slide slide5 hidden">
+          <h2 class="slide-title">{{influence_marketing}}</h2>
+          <p class="slide-text">
+            {{IGaming}}
+          </p>
+          <p class="slide-text">
+            {{blogger}}
+          </p>
+        </div>
 
-      <div class="slide slide6 hidden">
-        <h2 class="slide-title">{{context_advertising}}</h2>
-        <p class="slide-text">
-          {{set_up}}
-        </p>
-        <ul class="slide-list">
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{keywords_research}}
-            </li>
-          </div>
+        <div class="slide slide6 hidden">
+          <h2 class="slide-title">{{context_advertising}}</h2>
+          <p class="slide-text">
+            {{set_up}}
+          </p>
+          <ul class="slide-list">
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{keywords_research}}
+              </li>
+            </div>
 
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{monitoring}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{user_flow}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{ad_types}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{approach}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{hypotheses}}
-            </li>
-          </div>
-        </ul>
-      </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{monitoring}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{user_flow}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{ad_types}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{approach}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{hypotheses}}
+              </li>
+            </div>
+          </ul>
+        </div>
 
-      <div class="slide slide7 hidden">
-        <h2 class="slide-title">{{SERM}}</h2>
-        <p class="slide-text">
-          {{web_awareness}}
-        </p>
-        <ul class="slide-list">
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{positions_analysis}}
-            </li>
+        <div class="slide slide7 hidden">
+          <h2 class="slide-title">{{SERM}}</h2>
+          <p class="slide-text">
+            {{web_awareness}}
+          </p>
+          <ul class="slide-list">
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{positions_analysis}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{comparison}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{strategy}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{strengths_weaknesses}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{reviews}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{irrelevant_reviews}}
+              </li>
+            </div>
+            <div class="slide-list-box">
+              <img src="./assets/img/Vector_tick1.svg" alt="" />
+              <li class="slide-list-box-li">
+                {{reputation_dynamics}}
+              </li>
+            </div>
+          </ul>
+        </div>
+
+        <div class="slider-lines-container">
+          <div class="slider-lines">
+            <div class="slider-line-small"></div>
+            <div class="slider-line-long"></div>
           </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{comparison}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{strategy}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{strengths_weaknesses}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{reviews}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{irrelevant_reviews}}
-            </li>
-          </div>
-          <div class="slide-list-box">
-            <img src="./assets/img/Vector_tick1.svg" alt="" />
-            <li class="slide-list-box-li">
-              {{reputation_dynamics}}
-            </li>
-          </div>
-        </ul>
+        </div>
       </div>
     </div>
-    {{! <div class="slider-runner"></div> }}
-    {{! <div class="slider-scrollbar"></div> }}
   </div>
 
   <div class="block-about">

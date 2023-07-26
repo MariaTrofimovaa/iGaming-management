@@ -1,6 +1,7 @@
 <div class="nav-bar-mobile-overlay" onClick="hideMobileMenu()"></div>
 <div class="nav-bar-mobile hidden">
-  <div>
+  <div class="nav-container">
+    <div>
     <div class="nav-bar-mobile-header">
       <div class="lang_block">
         <ul class="dropdown-lang">
@@ -25,15 +26,15 @@
 
     <div class="nav-bar-mobile-menu">
       <div class="nav-bar-mobile-menu-items">
-        <a href="#block-slider">{{how_to_help}} </a>
+         <a href="#" onclick="smoothScroll('block-slider')">{{how_to_help}}</a>
         <img src="./assets/img/arrow_up_right2.svg" alt="" />
       </div>
       <div class="nav-bar-mobile-menu-items">
-        <a href="#block-project">{{hire_team}}</a>
+        <a href="#" onclick="smoothScroll('block-project')">{{hire_team}}</a>
         <img src="./assets/img/arrow_up_right2.svg" alt="" />
       </div>
       <div class="nav-bar-mobile-menu-items">
-        <a href="#block-project">{{choose_proj}} </a>
+        <a href="#" onclick="smoothScroll('block-project')">{{choose_proj}} </a>
         <img src="./assets/img/arrow_up_right2.svg" alt="" />
       </div>
     </div>
@@ -43,10 +44,13 @@
     <a class="contact_us">{{login}}</a>
     <a class="contact_us">{{registration}}</a>
   </div>
+  </div>
 </div>
+
   <div class="block_video">
       <video src="./assets/video/Video1.mp4" autoplay muted playsinline loop></video>
   </div>
+
 <div class="content-block">
   {{> header}}
   {{> main}}

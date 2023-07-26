@@ -48,13 +48,6 @@ document.addEventListener("DOMContentLoaded", () => {
  * Preloader actions
  */
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   setTimeout(function () {
-//     let preloader = document.querySelector(".preloader");
-//     preloader.classList.add("hide");
-//   }, 2000);
-// });
-
 setTimeout(function () {
   let preloader = document.querySelector(".preloader");
   preloader.classList.add("hide");
@@ -76,159 +69,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // *********************************************************** //
-
-/*
- * Slider actions
- */
-
-document.addEventListener("DOMContentLoaded", function () {
-  const prevButton = document.querySelector(".prev-button");
-  const nextButton = document.querySelector(".next-button");
-  const slider = document.querySelector(".slider");
-  const slides = slider.querySelectorAll(".slide");
-  const totalSlides = slides.length;
-  let currentIndex = 0;
-
-  // Функция для обновления текущего слайда
-  function updateCurrentSlide() {
-    const currentSlideNumber = (currentIndex + 1).toString().padStart(2, "0");
-    const currentSlideTotal = totalSlides.toString().padStart(2, "0");
-    const currentSlideNumberDisplay = document.querySelector(
-      ".current-slide-number"
-    );
-    const currentSlideTotalDisplay = document.querySelector(
-      ".current-slide-total"
-    );
-    currentSlideNumberDisplay.textContent = currentSlideNumber;
-    currentSlideTotalDisplay.textContent = currentSlideTotal;
-  }
-
-  // Функция для перехода к следующему слайду
-  function goToNextSlide() {
-    slides[currentIndex].classList.add("hidden");
-    currentIndex = (currentIndex + 1) % totalSlides;
-    slides[currentIndex].classList.remove("hidden");
-    updateCurrentSlide();
-  }
-
-  // Функция для перехода к предыдущему слайду
-  function goToPrevSlide() {
-    slides[currentIndex].classList.add("hidden");
-    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-    slides[currentIndex].classList.remove("hidden");
-    updateCurrentSlide();
-  }
-
-  // Автоматическая прокрутка слайдов (раз в 5 секунд)
-  // function autoSlide() {
-  //   goToNextSlide();
-  // }
-
-  // Установка интервала для автоматической прокрутки
-  // let slideInterval = setInterval(autoSlide, 5000);
-
-  // Остановка автоматической прокрутки при наведении на слайдер
-  // slider.addEventListener("mouseenter", () => {
-  //   clearInterval(slideInterval);
-  // });
-
-  // Возобновление автоматической прокрутки при уходе с слайдера
-  // slider.addEventListener("mouseleave", () => {
-  //   slideInterval = setInterval(autoSlide, 5000);
-  // });
-
-  // Обработчики событий для кнопок переключения слайдов
-  prevButton.addEventListener("click", () => {
-    goToPrevSlide();
-    clearInterval(slideInterval); // Остановка автоматической прокрутки при ручном переключении
-  });
-
-  nextButton.addEventListener("click", () => {
-    goToNextSlide();
-    clearInterval(slideInterval); // Остановка автоматической прокрутки при ручном переключении
-  });
-
-  // Показать первый слайд при загрузке страницы
-  slides[currentIndex].classList.remove("hidden");
-  updateCurrentSlide();
-});
-
-// *************
-
-// document.addEventListener("DOMContentLoaded", function () {
-//   const prevButton = document.querySelector(".prev-button");
-//   const nextButton = document.querySelector(".next-button");
-//   const slider = document.querySelector(".slider");
-//   const slides = slider.querySelectorAll(".slide");
-//   const totalSlides = slides.length;
-//   let currentIndex = 0;
-
-//   // Функция для обновления текущего слайда
-//   function updateCurrentSlide() {
-//     const currentSlideNumber = (currentIndex + 1).toString().padStart(2, "0");
-//     const currentSlideTotal =
-//       totalSlides < 10 ? `0${totalSlides}` : totalSlides;
-//     const currentSlideNumberDisplay = document.querySelector(
-//       ".current-slide-number"
-//     );
-//     const currentSlideTotalDisplay = document.querySelector(
-//       ".current-slide-total"
-//     );
-//     currentSlideNumberDisplay.textContent = currentSlideNumber;
-//     currentSlideTotalDisplay.textContent = currentSlideTotal;
-//   }
-
-//   // Функция для перехода к следующему слайду
-//   function goToNextSlide() {
-//     slides[currentIndex].classList.add("hidden");
-//     currentIndex = (currentIndex + 1) % totalSlides;
-//     slides[currentIndex].classList.remove("hidden");
-//     updateCurrentSlide();
-//   }
-
-//   // Функция для перехода к предыдущему слайду
-//   function goToPrevSlide() {
-//     slides[currentIndex].classList.add("hidden");
-//     currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-//     slides[currentIndex].classList.remove("hidden");
-//     updateCurrentSlide();
-//   }
-
-//   // Автоматическая прокрутка слайдов (раз в 5 секунд)
-//   function autoSlide() {
-//     goToNextSlide();
-//   }
-
-//   // Установка интервала для автоматической прокрутки
-//   let slideInterval = setInterval(autoSlide, 5000);
-
-//   // Остановка автоматической прокрутки при наведении на слайдер
-//   slider.addEventListener("mouseenter", () => {
-//     clearInterval(slideInterval);
-//   });
-
-//   // Возобновление автоматической прокрутки при уходе с слайдера
-//   slider.addEventListener("mouseleave", () => {
-//     slideInterval = setInterval(autoSlide, 5000);
-//   });
-
-//   // Обработчики событий для кнопок переключения слайдов
-//   prevButton.addEventListener("click", () => {
-//     goToPrevSlide();
-//     clearInterval(slideInterval); // Остановка автоматической прокрутки при ручном переключении
-//   });
-
-//   nextButton.addEventListener("click", () => {
-//     goToNextSlide();
-//     clearInterval(slideInterval); // Остановка автоматической прокрутки при ручном переключении
-//   });
-
-//   // Показать первый слайд при загрузке страницы
-//   slides[currentIndex].classList.remove("hidden");
-//   updateCurrentSlide();
-// });
-
-// *********************************************************** //
 /*
  * Move slider buttons on mobile version
  */
@@ -248,8 +88,6 @@ function moveButtons() {
 
 window.addEventListener("DOMContentLoaded", moveButtons);
 window.addEventListener("resize", moveButtons);
-
-// *********************************************************** //
 
 // *********************************************************** //
 /*
@@ -353,23 +191,120 @@ closeButton.addEventListener("click", closeModal);
  * Burger menu toggle
  */
 
+// function toggleMobileMenu() {
+//   const mobileMenu = document.querySelector(".nav-bar-mobile");
+//   mobileMenu.classList.toggle("hidden");
+
+//   const mobileMenuOverlay = document.querySelector(".nav-bar-mobile-overlay");
+//   mobileMenuOverlay.style.display = mobileMenu.classList.contains("hidden")
+//     ? "none"
+//     : "block";
+// }
+
 function toggleMobileMenu() {
   const mobileMenu = document.querySelector(".nav-bar-mobile");
-  mobileMenu.classList.toggle("hidden");
-
   const mobileMenuOverlay = document.querySelector(".nav-bar-mobile-overlay");
-  mobileMenuOverlay.style.display = mobileMenu.classList.contains("hidden")
-    ? "none"
-    : "block";
+  const isHidden = mobileMenu.classList.contains("hidden");
+
+  if (isHidden) {
+    mobileMenu.style.transform = "translateX(0)";
+    mobileMenuOverlay.style.display = "block";
+    mobileMenu.style.display = "block";
+
+    // Удаляем класс .hidden после завершения анимации
+    setTimeout(() => {
+      mobileMenu.classList.remove("hidden");
+    }, 400);
+  } else {
+    mobileMenu.style.transform = "translateX(100%)";
+    mobileMenuOverlay.style.display = "none";
+    mobileMenu.classList.add("hidden");
+  }
 }
 
 function hideMobileMenu() {
   const mobileMenu = document.querySelector(".nav-bar-mobile");
-  mobileMenu.classList.add("hidden");
-
   const mobileMenuOverlay = document.querySelector(".nav-bar-mobile-overlay");
+
+  mobileMenu.style.transform = "translateX(100%)";
   mobileMenuOverlay.style.display = "none";
+
+  // Добавляем обработчик события transitionend
+  mobileMenu.addEventListener("transitionend", function () {
+    mobileMenu.style.display = "none";
+  });
+
+  mobileMenu.classList.add("hidden");
 }
+
+function smoothScroll(targetId) {
+  const mobileMenu = document.querySelector(".nav-bar-mobile");
+  const mobileMenuOverlay = document.querySelector(".nav-bar-mobile-overlay");
+
+  function closeMobileMenu() {
+    mobileMenu.style.transform = "translateX(100%)";
+    mobileMenuOverlay.style.display = "none";
+    setTimeout(() => {
+      mobileMenu.style.display = "none";
+    }, 400); // Задержка перед скрытием меню в миллисекундах (здесь 400 мс)
+  }
+
+  const targetElement = document.getElementById(targetId);
+  if (targetElement) {
+    const targetPosition = targetElement.getBoundingClientRect().top;
+    const startPosition = window.pageYOffset;
+    const distance = targetPosition - startPosition;
+    const duration = 800;
+    let startTimestamp = null;
+
+    function animation(timestamp) {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = timestamp - startTimestamp;
+      const percentage = Math.min(progress / duration, 1);
+      window.scrollTo(0, startPosition + distance * percentage);
+      if (progress < duration) requestAnimationFrame(animation);
+      else {
+        closeMobileMenu(); // Закрыть меню после завершения анимации
+        mobileMenu.classList.add("hidden");
+      }
+    }
+
+    requestAnimationFrame(animation);
+  }
+}
+
+// function smoothScroll(targetId) {
+//   const mobileMenu = document.querySelector(".nav-bar-mobile");
+//   const mobileMenuOverlay = document.querySelector(".nav-bar-mobile-overlay");
+
+//   function closeMobileMenu() {
+//     mobileMenu.style.transform = "translateX(100%)";
+//     mobileMenuOverlay.style.display = "none";
+//     setTimeout(() => {
+//       mobileMenu.style.display = "none";
+//     }, 400); // Время анимации скрытия в миллисекундах (здесь 400 мс)
+//   }
+
+//   const targetElement = document.getElementById(targetId);
+//   if (targetElement) {
+//     const targetPosition = targetElement.getBoundingClientRect().top;
+//     const startPosition = window.pageYOffset;
+//     const distance = targetPosition - startPosition;
+//     const duration = 800;
+//     let startTimestamp = null;
+
+//     function animation(timestamp) {
+//       if (!startTimestamp) startTimestamp = timestamp;
+//       const progress = timestamp - startTimestamp;
+//       const percentage = Math.min(progress / duration, 1);
+//       window.scrollTo(0, startPosition + distance * percentage);
+//       if (progress < duration) requestAnimationFrame(animation);
+//       else closeMobileMenu(); // Закрыть меню после завершения анимации
+//     }
+
+//     requestAnimationFrame(animation);
+//   }
+// }
 
 // *********************************************************** //
 
