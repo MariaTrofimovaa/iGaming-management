@@ -1,4 +1,4 @@
-import { debounce } from "lodash";
+// import { debounce } from "lodash";
 
 document.addEventListener("DOMContentLoaded", function () {
   const currentSlideNumberDisplay = document.querySelector(
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       // Ожидаем, чтобы слайды переключились одновременно с затуханием текущего слайда
-      //   await delayedHideAndMove(currentIndex);
+      await delayedHideAndMove(currentIndex);
 
       currentIndex = currentIndex + 1;
 
